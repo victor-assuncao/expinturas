@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer > .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer > .container > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer__contact__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.footer__contact__text {
+    font-size: 1.8rem;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+
+@media (max-width: 500px) {
+    .footer > .container {
+        flex-direction: column;
+        gap: 32px;
+    }
+}

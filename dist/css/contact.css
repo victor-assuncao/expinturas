@@ -1,0 +1,199 @@
+.contact {
+    background-color: var(--blue-4);
+}
+
+.contact__title {
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: initial;
+}
+
+.contact__title,
+.contact__subtitle {
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact__subtitle {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.contact > .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 80px;
+    
+}
+
+.contact__link {
+    text-decoration: none;
+}
+
+.contact__btn {
+    align-items: center;
+    border: none;
+    border-radius: 100px;
+    box-shadow: var(--box-shadow-noactive);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.8rem;
+    gap: 8px;
+    letter-spacing: 1px;
+    padding: 12px 18px;
+    transition: box-shadow var(--transition-2);
+}
+
+.contact__btn:hover {
+    box-shadow: var(--box-shadow-active);
+}
+
+.contact__btn__logo {
+    width: 46px;
+}
+
+.contact__whatsapp {
+    background: linear-gradient(90deg, #37ac44,#068a1c) #37ac44;
+}
+
+.contact__instagram {
+    background: linear-gradient(90deg,#D85757, #8d2f97) #D85757;
+}
+
+.contact__email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.contact__email > .container {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.contact__sideline {
+    background-color: #ffffff;
+    flex-grow: 1;
+    height: 3px;
+}
+
+.contact__email__title {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.contact__email__logo {
+    height: 66px;
+    margin: 50px auto 40px auto;
+    width: 66px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "name email"
+        "message message"
+        "message message"
+        "submit submit"
+    ;
+
+    gap: 10px;
+
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+.form > .container:nth-child(1) {
+    grid-area: name;
+   }
+   
+.form > .container:nth-child(2) {
+    grid-area: email;
+}
+
+.form > .container:nth-child(3) {
+    grid-area: message;
+}
+
+
+label.form__label {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.form__input {
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-noactive);
+    font-size: 2rem;
+    margin-top: 10px;
+    padding: 16px;
+    width: 100%;
+}
+
+.form__textarea {
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-noactive);
+    font-size: 2rem;
+    height: 220px;
+    margin-top: 10px;
+    min-height: 220px;
+    padding: 14px;
+    resize: none;
+    width: 100%;
+}
+
+
+.form__submit {
+    background-color: var(--blue-1);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-noactive);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    grid-area: submit;
+    margin-top: 20px;
+    max-height: 62px;
+    padding: 14px;
+    transition: background-color var(--transition-1);
+
+}
+
+.form__submit:hover {
+    background-color: var(--blue-2);
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    
+    .form {
+        grid-template-areas: 
+        "name name"
+        "email email"
+        "message message"
+        "message message"
+        "submit submit"
+    ;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .contact__email__title {
+        font-size: 2.6rem;
+    }
+}

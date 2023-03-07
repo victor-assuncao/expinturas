@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    padding-top: 90px;
+}

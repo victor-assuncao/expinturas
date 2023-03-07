@@ -1,0 +1,130 @@
+.about {
+    display: flex;
+    position: relative;
+}
+
+.about > .container:first-child {
+    background-color: var(--blue-4);
+    position: relative;
+    width: 40vw;
+    z-index: 2;
+}
+
+.about__title {
+    color: var(--blue-1);
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.about__description {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.about__description strong {
+    font-weight: 600;
+}
+
+.about__btn {
+    background-color: transparent;
+    border: 3px solid var(--blue-1);
+    border-radius: 100px;
+    color: var(--blue-1);
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-top: 50px;
+    padding: 12px 32px;
+    transition-property: background-color, color;
+    transition: var(--transition-2);
+    width: 300px;
+}
+
+.about__btn:hover {
+    background-color: var(--blue-1);
+    color: #ffffff;
+}
+
+.about > .container:last-child {
+    background-color: var(--blue-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.about__image {
+    height: 100%;
+    width: 60vw;
+    object-fit: cover;
+}
+
+.about__after__image {
+    background-image: linear-gradient(90deg, var(--blue-4) 10%, #006b9c6c);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 60vw;
+}
+
+@media (max-width: 1000px) {
+
+    .about > .container:first-child {
+        width: 50vw;
+    }
+
+    .about__image,
+    .about__after__image {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about > .container:first-child {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about > .container:first-child > * {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about__btn {
+        background-color: var(--blue-1);
+        box-shadow: var(--box-shadow-noactive);
+        color: #ffffff;
+        margin: 50px auto 0 auto;
+    }
+
+    .about__image,
+    .about__after__image {
+        height: calc(100vh - 90px);
+        width: 100vw;
+    }
+}
+
+@media (max-width: 390px) {
+    
+    .about__title {
+        font-size: 3.5rem;
+    }
+    
+    .about__description {
+        font-size: 2rem;
+    }
+
+    .about__btn {
+        font-size: 2rem;
+        width: 95%;
+    }
+}
